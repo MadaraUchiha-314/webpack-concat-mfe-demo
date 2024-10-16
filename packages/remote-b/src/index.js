@@ -1,4 +1,4 @@
-export async function doSomethingElse() {
+export function doSomethingElse() {
   const ReactDOM = {
     version: '5.6.7'
   };
@@ -11,9 +11,7 @@ export async function doSomethingElse() {
   };
 }
 
-const somethingElse = await doSomethingElse();
+const somethingElse = doSomethingElse();
 
 document.getElementById('remote-b').innerHTML =
   'remote-b says' + JSON.stringify(somethingElse);
-
-alert('asdasd');

@@ -1,4 +1,4 @@
-export async function doSomething() {
+export function doSomething() {
   const React = {
     version: '1.2.3'
   };
@@ -11,7 +11,7 @@ export async function doSomething() {
   };
 }
 
-const something = await doSomething();
+const something = doSomething();
 
 document.getElementById('remote-a').innerHTML =
   'remote-a says' + JSON.stringify(something);
