@@ -1,5 +1,8 @@
 export async function doSomethingElse() {
-  const ReactDOM = await import('react-dom');
+  const ReactDOM = {
+    version: '5.6.7'
+  };
+  // const ReactDOM = await import('react-dom');
   const reactDomVersion = ReactDOM.version;
   console.log(ReactDOM);
   console.log(reactDomVersion);

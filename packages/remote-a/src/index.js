@@ -1,5 +1,8 @@
 export async function doSomething() {
-  const React = await import('react');
+  const React = {
+    version: '1.2.3'
+  };
+  // const React = await import('react');
   const reactVersion = React.version;
   console.log(React);
   console.log(reactVersion);
