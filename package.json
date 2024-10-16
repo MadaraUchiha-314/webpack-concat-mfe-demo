@@ -1,0 +1,23 @@
+{
+  "name": "getting-started-using-a-configuration",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["packages/remote-a", "packages/remote-b"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build -ws --if-present",
+    "concat": "rm -rf dist/ && mkdir dist/ && cat ./packages/**/dist/*.js >> ./dist/concat-all-remotes.js",
+    "serve": "serve ./",
+    "start": "npm run build && npm run concat && npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^12.0.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "nodemon": "3.1.7"
+  }
+}
