@@ -2,18 +2,17 @@
   <head>
     <title>webpack-concat-mfe-demo</title>
     <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.7/require.min.js"></script>
+    <script src="./dist/concat-all-remotes.js"></script>
     <script>
       require(['RemoteA'], (mod) => {
-        console.log('Yay!');
       });
       require(['RemoteB'], (mod) => {
-        console.log('Yay!');
       });
     </script>
   </head>
   <body>
     <h1>webpack-concat-mfe-demo</h1>
-    <div id="remote-a">This will be replaced by remote-a's code</div>
+    <div id="remote-a">This will ideally be replaced by remote-a's code! If you see this chunk concat is not working! :(</div>
     <div id="remote-b">This will ideally be replaced by remote-b's code! If you see this chunk concat is not working! :(</div>
   </body>
 </html>
