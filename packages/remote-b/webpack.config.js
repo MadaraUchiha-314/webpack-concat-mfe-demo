@@ -7,6 +7,8 @@ module.exports = {
     chunkFilename: 'remote-b-chunk-[name].js',
     path: path.resolve(__dirname, 'dist'),
     library: {
+      name: 'RemoteB',
+      umdNamedDefine: true,
       type: 'umd',
     },
   },

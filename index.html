@@ -3,7 +3,10 @@
     <title>webpack-concat-mfe-demo</title>
     <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.7/require.min.js"></script>
     <script>
-      require(['./dist/concat-all-remotes.js'], (mod) => {
+      require(['RemoteA'], (mod) => {
+        console.log('Yay!');
+      });
+      require(['RemoteB'], (mod) => {
         console.log('Yay!');
       });
     </script>
